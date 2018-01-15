@@ -12,5 +12,7 @@ namespace Contoso.Model
     public class Student : People
     {
         public DateTime? EnrollmentDate { get; set; }
+
+        public ICollection<Enrollment> Enrollments { get; set; }
     }
 }
