@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Contoso.Data
 {
-    public class PersonRepository : Repository<People>, IPersonRepository
+    public class PeopleRepository : Repository<People>, IPeopleRepository
     {
-        public PersonRepository(ContosoContext context) : base(context)
+        public PeopleRepository(ContosoContext context) : base(context)
         {
         }
 
@@ -20,7 +20,7 @@ namespace Contoso.Data
         }
     }
 
-    public interface IPersonRepository : IRepository<People>
+    public interface IPeopleRepository : IRepository<People>
     {
         People GetByLastName(String name);
     }

@@ -11,7 +11,6 @@ namespace Contoso.Model
     [Table("Student")]
     public class Student : People
     {
-        
         public DateTime? EnrollmentDate { get; set; }
     }
 }
