@@ -16,6 +16,7 @@ namespace Contoso.Data
         public Instructor GetByLastName(string lastName)
         {
             var instructor = _context.Instructors.Where(i => i.LastName == lastName).FirstOrDefault();
+            //var instructor = _context.OfType<Instructor>().FirstOrDefault(s => s.lastName = lastName);
             return instructor;
         }
     }

@@ -15,7 +15,13 @@ namespace Contoso.Service
         {
             _instructorRepository = instructorRepository;
         }
-        public Instructor GetByLastName(string lastName)
+
+        public IEnumerable<Instructor> GetAllInstructors()
+        {
+            return _instructorRepository.GetAll();
+        }
+
+        public Instructor GetInstructorByLastName(string lastName)
         {
             return _instructorRepository.GetByLastName(lastName);
         }
@@ -23,6 +29,7 @@ namespace Contoso.Service
 
     public interface IInstructorService
     {
-        Instructor GetByLastName(String lastName);
+        Instructor GetInstructorByLastName(String lastName);
+        IEnumerable<Instructor> GetAllInstructors();
     }
 }

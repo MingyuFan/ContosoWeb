@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +192,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -208,6 +210,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contoso.Data\Contoso.Data.csproj">
+      <Project>{c98521f0-b592-47c1-96f6-293b1ff9252c}</Project>
+      <Name>Contoso.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contoso.Model\Contoso.Model.csproj">
+      <Project>{46d43bed-c5d3-4637-a06a-bd6f7abf7a4b}</Project>
+      <Name>Contoso.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contoso.Service\Contoso.Service.csproj">
+      <Project>{6a10a5e0-ee83-4ed4-bce3-bb92e0bd79b3}</Project>
+      <Name>Contoso.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
