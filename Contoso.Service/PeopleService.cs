@@ -8,20 +8,20 @@ using Contoso.Model;
 
 namespace Contoso.Service
 {
-    public class PersonService : IPersonService
+    public class PeopleService : IPeopleService
     {
-        private readonly IPersonRepository _personRepository;
-        public PersonService(IPersonRepository personRepository)
+        private readonly IPeopleRepository _peopleRepository;
+        public PeopleService(IPeopleRepository peopleRepository)
         {
-            _personRepository = personRepository;
+            _peopleRepository = peopleRepository;
         }
         public IEnumerable<People> GetAll()
         {
-            return _personRepository.GetAll();
+            return _peopleRepository.GetAll();
         }
     }
 
-    public interface IPersonService
+    public interface IPeopleService
     {
         IEnumerable<People> GetAll();
     }

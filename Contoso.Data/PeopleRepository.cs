@@ -15,8 +15,8 @@ namespace Contoso.Data
 
         public People GetByLastName(string lastname)
         {
-            var person = _context.People.Where(p => p.LastName == lastname).FirstOrDefault();
-            return person;
+            var people = _context.People.Where(p => p.LastName == lastname).FirstOrDefault();
+            return people;
         }
     }
 
