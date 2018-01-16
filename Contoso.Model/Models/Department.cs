@@ -16,7 +16,7 @@ namespace Contoso.Model
         public Nullable<int> InstructorId { get; set; }
         public Instructor Instructor { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
 
     }
 }
