@@ -13,7 +13,7 @@ namespace Contoso.Model
         public Decimal Budget { get; set; }
         public DateTime? StartDate { get; set; }
 
-        public int InstructorId { get; set; }
+        public Nullable<int> InstructorId { get; set; }
         public Instructor Instructor { get; set; }
 
         public ICollection<Course> Courses { get; set; }

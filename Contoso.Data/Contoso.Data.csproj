@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201801161454475_AddJunctionTableInstructorCourses.Designer.cs">
       <DependentUpon>201801161454475_AddJunctionTableInstructorCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801161953578_TryLetInstructorIdInDepNullable.cs" />
+    <Compile Include="Migrations\201801161953578_TryLetInstructorIdInDepNullable.Designer.cs">
+      <DependentUpon>201801161953578_TryLetInstructorIdInDepNullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\CourseRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="IRepository.cs" />
@@ -159,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801161454475_AddJunctionTableInstructorCourses.resx">
       <DependentUpon>201801161454475_AddJunctionTableInstructorCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801161953578_TryLetInstructorIdInDepNullable.resx">
+      <DependentUpon>201801161953578_TryLetInstructorIdInDepNullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

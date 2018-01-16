@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Contoso.Model;
+using Contoso.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,15 @@ namespace ContosoWeb.Controllers
 {
     public class CourseController : Controller
     {
+        private readonly ICourseService _iCourseService;
+        public CourseController(ICourseService iCourseService)
+        {
+            _iCourseService = iCourseService;
+        }
         // GET: Course
         public ActionResult Index()
         {
-            return View();
+            return View(_iCourseService.GetAll());
         }
 
         // GET: Course/Details/5
@@ -28,12 +35,15 @@ namespace ContosoWeb.Controllers
 
         // POST: Course/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Course course)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                if(ModelState.IsValid)
+                {
+                    _iCourseService.AddCourse(course);
+                }
                 return RedirectToAction("Index");
             }
             catch
