@@ -11,6 +11,7 @@ namespace ContosoWeb.Controllers
 {
     public class DepartmentController : Controller
     {
+        private ContosoContext contoso = new ContosoContext();
         private readonly IDepartmentService _iDepartmentService;
         public DepartmentController(IDepartmentService iDepartmentService)
         {
@@ -23,7 +24,9 @@ namespace ContosoWeb.Controllers
             //DepartmentRepository ir = new DepartmentRepository(cc);
             //DepartmentService instructorService = new DepartmentService(ir);
             //var department = instructorService.GetAll();
-            var departments = _iDepartmentService.GetAll();
+            //-----------------------------------------------------//
+            var departments = contoso.Departments.Include("Courses").ToList();
+            //var departments = _iDepartmentService.GetAll();
             return View(departments);
         }
 
