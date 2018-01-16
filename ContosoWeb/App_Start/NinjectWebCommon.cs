@@ -70,11 +70,13 @@ namespace Contoso.App_Start
 
             kernel.Bind<IDepartmentRepository>().To<DepartmentRepository>();
             kernel.Bind<IInstructorRepository>().To<InstructorRepository>();
+            kernel.Bind<ICourseRepository>().To<CourseRepository>();
 
 
             //Services
             kernel.Bind<IDepartmentService>().To<DepartmentService>();
             kernel.Bind<IInstructorService>().To<InstructorService>();
+            kernel.Bind<ICourseService>().To<CourseService>();
         }
     }
 }

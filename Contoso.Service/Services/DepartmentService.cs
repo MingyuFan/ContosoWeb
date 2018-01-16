@@ -22,6 +22,12 @@ namespace Contoso.Service
             _departmentRepository.SaveChanges();
         }
 
+        public void DeleteDepartment(Department department)
+        {
+            _departmentRepository.Delete(department);
+            _departmentRepository.SaveChanges();
+        }
+
         public IEnumerable<Department> GetAll()
         {
             return _departmentRepository.GetAll();
@@ -45,5 +51,6 @@ namespace Contoso.Service
         Department GetDepartmentById(int id);
         void AddDepartment(Department department);
         void UpdateDepartment(Department department);
+        void DeleteDepartment(Department department);
     }
 }
