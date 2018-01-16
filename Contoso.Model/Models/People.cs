@@ -19,5 +19,7 @@ namespace Contoso.Model
         public String State { get; set; }
         public String ZipCode { get; set; }
         public String Phone { get; set; }
+
+        public ICollection<Role> Roles { get; set; }
     }
 }

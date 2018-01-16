@@ -60,6 +60,18 @@
     <Compile Include="Migrations\201801152207081_AddInstructorsTableAndFKFromToDepartment.Designer.cs">
       <DependentUpon>201801152207081_AddInstructorsTableAndFKFromToDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801161445276_AddPeopleRoleJunctionTable.cs" />
+    <Compile Include="Migrations\201801161445276_AddPeopleRoleJunctionTable.Designer.cs">
+      <DependentUpon>201801161445276_AddPeopleRoleJunctionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801161452054_AddPeopleRoleJunctionTableSecondTry.cs" />
+    <Compile Include="Migrations\201801161452054_AddPeopleRoleJunctionTableSecondTry.Designer.cs">
+      <DependentUpon>201801161452054_AddPeopleRoleJunctionTableSecondTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801161454475_AddJunctionTableInstructorCourses.cs" />
+    <Compile Include="Migrations\201801161454475_AddJunctionTableInstructorCourses.Designer.cs">
+      <DependentUpon>201801161454475_AddJunctionTableInstructorCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\CourseRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="IRepository.cs" />
@@ -138,6 +150,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801152207081_AddInstructorsTableAndFKFromToDepartment.resx">
       <DependentUpon>201801152207081_AddInstructorsTableAndFKFromToDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801161445276_AddPeopleRoleJunctionTable.resx">
+      <DependentUpon>201801161445276_AddPeopleRoleJunctionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801161452054_AddPeopleRoleJunctionTableSecondTry.resx">
+      <DependentUpon>201801161452054_AddPeopleRoleJunctionTableSecondTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801161454475_AddJunctionTableInstructorCourses.resx">
+      <DependentUpon>201801161454475_AddJunctionTableInstructorCourses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

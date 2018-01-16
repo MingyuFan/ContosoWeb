@@ -15,14 +15,35 @@ namespace Contoso.Service
         {
             _departmentRepository = departmentRepository;
         }
+
+        public void AddDepartment(Department department)
+        {
+            _departmentRepository.Add(department);
+            _departmentRepository.SaveChanges();
+        }
+
         public IEnumerable<Department> GetAll()
         {
             return _departmentRepository.GetAll();
+        }
+
+        public Department GetDepartmentById(int id)
+        {
+            return _departmentRepository.GetById(id);
+        }
+
+        public void UpdateDepartment(Department department)
+        {
+            _departmentRepository.Update(department);
+            _departmentRepository.SaveChanges();
         }
     }
 
     public interface IDepartmentService
     {
         IEnumerable<Department> GetAll();
+        Department GetDepartmentById(int id);
+        void AddDepartment(Department department);
+        void UpdateDepartment(Department department);
     }
 }

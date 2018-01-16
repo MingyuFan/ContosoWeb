@@ -14,5 +14,6 @@ namespace Contoso.Model
         public DateTime? HireDate { get; set; }
 
         public ICollection<Department> Departments { get; set; }
+        public ICollection<Course> Courses { get; set; }
     }
 }
