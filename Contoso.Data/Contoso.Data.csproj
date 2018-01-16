@@ -112,6 +112,8 @@
     <Compile Include="Repositories\InstructorRepository.cs" />
     <Compile Include="Repositories\PeopleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
